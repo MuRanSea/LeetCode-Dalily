@@ -8,6 +8,16 @@ namespace DailyPractice
 {
     public static class Log
     {
+        public static void Info(string message)
+        {
+            Console.WriteLine(message);
+        }
+
+        public static void Info(string format,params object[] arg)
+        {
+            Console.WriteLine(format, arg);
+        }
+
         public static void LogArray<T>(T[] array)
         {
             Console.WriteLine(GetArrayStr(array));

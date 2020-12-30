@@ -71,5 +71,14 @@ namespace Test
             };
             Assert.AreEqual(result, foo.Merge(parameter));
         }
+
+        [Test]
+        public void Test_28()
+        {
+            Day_28 foo = new Day_28();
+            var rt = foo.MonotoneIncreasingDigits(2350);
+            Console.WriteLine(rt);
+            Assert.AreEqual(2349, rt);
+        }
     }
 }
