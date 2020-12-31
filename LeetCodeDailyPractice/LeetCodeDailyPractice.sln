@@ -5,11 +5,9 @@ VisualStudioVersion = 16.0.30803.129
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DailyPractice", "DailyPractice\DailyPractice.csproj", "{9E3388A9-6561-4F8E-88D6-C5085F88EA6D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{328DD86C-B117-41AC-9EC1-E7E6896C4177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JianzhiOffer", "JianzhiOffer\JianzhiOffer.csproj", "{302DA5E9-FFDD-4D78-89DF-FE460C8874AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JianzhiOffer", "JianzhiOffer\JianzhiOffer.csproj", "{302DA5E9-FFDD-4D78-89DF-FE460C8874AA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyConsole", "MyConsole\MyConsole.csproj", "{12729A68-0AB6-4BFF-9760-8A027E8B91A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyConsole", "MyConsole\MyConsole.csproj", "{12729A68-0AB6-4BFF-9760-8A027E8B91A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{9E3388A9-6561-4F8E-88D6-C5085F88EA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E3388A9-6561-4F8E-88D6-C5085F88EA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E3388A9-6561-4F8E-88D6-C5085F88EA6D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{328DD86C-B117-41AC-9EC1-E7E6896C4177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{328DD86C-B117-41AC-9EC1-E7E6896C4177}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{328DD86C-B117-41AC-9EC1-E7E6896C4177}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{328DD86C-B117-41AC-9EC1-E7E6896C4177}.Release|Any CPU.Build.0 = Release|Any CPU
 		{302DA5E9-FFDD-4D78-89DF-FE460C8874AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{302DA5E9-FFDD-4D78-89DF-FE460C8874AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{302DA5E9-FFDD-4D78-89DF-FE460C8874AA}.Release|Any CPU.ActiveCfg = Release|Any CPU

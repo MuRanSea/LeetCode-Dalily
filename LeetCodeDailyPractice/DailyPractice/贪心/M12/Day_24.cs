@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DailyPractice.Y2020.M12
+namespace DailyPractice.贪心.M12
 {
     public class Day_24
     {

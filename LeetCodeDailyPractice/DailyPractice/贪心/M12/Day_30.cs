@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DailyPractice.Y2020.M12
+namespace DailyPractice.贪心.M12
 {
     //https://leetcode-cn.com/problems/binary-tree-cameras/
     /*
