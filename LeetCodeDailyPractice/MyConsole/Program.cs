@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MyConsole
 {
@@ -7,43 +8,68 @@ namespace MyConsole
     {
         static void Main(string[] args)
         {
-            Foo f = new Foo();
-            Console.WriteLine(f.WiggleMaxLength(new int[] {1,1,1,1,1}));
+            Solution s = new Solution();
+            s.Start();
+            Console.ReadLine();
         }
 
-
-       
     }
 
-    class Foo
+    class Solution
     {
-        public int WiggleMaxLength(int[] nums)
+        public void Start()
         {
-            if (nums.Length == 0)
-            {
-                return 0;
-            }
-            int ans = 1;
-            int pre = nums[0];
-            int preFlag = int.MinValue;
-            for (int i = 1; i < nums.Length-1; i++)
-            {
-                var temp = nums[i] - pre;
-                if(preFlag == int.MinValue)
-                {
 
-                }
-                if(temp * preFlag < 0)
+            List<byte> bytes = new List<byte>(28);
+            //vector
+            bytes.AddRange(BitConverter.GetBytes(0.3f));
+            bytes.AddRange(BitConverter.GetBytes(0.4f));
+            bytes.AddRange(BitConverter.GetBytes(0.3f));
+            //qua
+            bytes.AddRange(BitConverter.GetBytes(0.1f));
+            bytes.AddRange(BitConverter.GetBytes(0.2f));
+            bytes.AddRange(BitConverter.GetBytes(0.1f));
+            bytes.AddRange(BitConverter.GetBytes(0.3f));
+
+
+            using(System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes.ToArray()))
+            {
+                byte[] buf = new byte[4];
+                int i = 0;
+                while (ms.Position<28)
                 {
-                    preFlag = temp;
-                    ans++;
+                    i++;
+                    var len = ms.Read(buf, 0, 4);
+                    float f = BitConverter.ToSingle(buf);
+                    Console.WriteLine($"<<<<<<<<<<<{f}");
                 }
             }
-            return ans;
+
+        }
+        //23:59 , 00:00 ,12:34
+        public int MinCostClimbingStairs(int[] cost)
+        {
+            if (cost.Length == 2)
+            {
+                return Math.Min(cost[0], cost[1]);
+            }
+            for (int i = 2; i < cost.Length; i++)
+            {
+                cost[i] = Math.Min(cost[i - 1], cost[i - 2]) + cost[i];
+            }
+            return Math.Min(cost[cost.Length-1],cost[cost.Length-2]);
         }
 
-        //[1,17,5,10,13,15,10,5,16,8]
-        //[1,17,10,13,10,16,8]
-
+        int[] GetArray(string str)
+        {
+            str = str.Trim(' ');
+            var rt = str.Split(',');
+            int[] array = new int[rt.Length];
+            for (int i = 0; i < rt.Length; i++)
+            {
+                array[i] = int.Parse(rt[i]);
+            }
+            return array;
+        }
     }
 }

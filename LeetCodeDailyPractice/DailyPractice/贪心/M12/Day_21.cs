@@ -74,6 +74,8 @@ namespace DailyPractice.贪心.M12
                     left = Math.Max(left, points[i][0]);
                 }
             }
+
+                         
             return arrowCounter;
         }
        
